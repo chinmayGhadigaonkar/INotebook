@@ -44,7 +44,7 @@ routers.post(
       };
 
       const autotoken = jwt.sign(data, JWT_SECRET);
-      console.log(result);
+      // console.log(result);
       //  res.status(200).send(result)
       res.status(200).json({sucess:true,autotoken});
     } catch (e) {

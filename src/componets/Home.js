@@ -140,7 +140,7 @@ const Home = (props) => {
         </div>
       </div>
       <div className="container ">
-        <h3 className="my-3 mx-3">Youer Notes </h3>
+        <h3 className="my-3 mx-3">Your Notes </h3>
         <div className="row d-flex flex-wrap">
           {notes.map((note) => {
             return (

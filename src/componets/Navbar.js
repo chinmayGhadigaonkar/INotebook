@@ -66,7 +66,7 @@ const Navbar = () => {
               </div>
             ) : (
               <div>
-                Welcome <strong className="mx-1 h5">{username}</strong>
+                Welcome <strong className="mx-1 h5">{username.slice(0,15)+"..."}</strong>
                 <button
                   className="btn btn-primary mx-1 "
                   onClick={logouthandle}
