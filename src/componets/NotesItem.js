@@ -8,7 +8,7 @@ const NotesItem = (props) => {
   const { deletenote } = context;
   return (
     <>
-      <div className="card my-3 " style={{ width: "22rem" }}>
+      <div className="card my-3 " style={{ width: "20rem" }}>
         <div className="card-body">
           <div className="d-flex">
             <h5 className="card-title">{note.title}</h5>
