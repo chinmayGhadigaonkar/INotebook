@@ -6,7 +6,8 @@ const Loginpage = (props) => {
   const navigator = useNavigate();
   const submit = async (e) => {
     e.preventDefault();
-    const respose = await fetch("http://localhost:5000/api/auth/login", {
+    const host = process.env.PORT
+    const respose = await fetch(`${host}/api/auth/login`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

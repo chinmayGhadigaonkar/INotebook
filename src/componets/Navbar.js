@@ -44,8 +44,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-          </div>
-          <ul className="nav navbar-nav ms-auto  ">
+            <ul className="nav navbar-nav ms-auto my-2 ">
           <div>
             {!localStorage.getItem("autotoken") ? (
               <div>
@@ -78,6 +77,8 @@ const Navbar = () => {
             )}
           </div>
           </ul>
+          </div>
+          
         </div>
       </nav>
     </div>

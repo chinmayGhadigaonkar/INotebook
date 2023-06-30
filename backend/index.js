@@ -2,11 +2,20 @@ const env = require("dotenv")
 env.config()
 require("./connection")
 const express= require("express");
+const path = require("path")
 
 
 var cors = require('cors')
-const port= 5000;
+const port= process.env.PORT || 5000;
 const app =express()
+
+app.use(express.static(path.join(__dirname,"../build")))
+
+app.get("*", function(_,res){
+    res.sendFile(path.join(__dirname,"../build/index.html")), function(err){
+        res.status(500).send(err)
+    }
+})
 
 
 app.use(cors())

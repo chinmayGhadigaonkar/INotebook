@@ -12,8 +12,8 @@ const Signup = (props) => {
   const navigator = useNavigate();
   const submit = async (e) => {
     e.preventDefault();
-
-    const respose = await fetch("http://localhost:5000/api/auth", {
+    const host = process.env.PORT
+    const respose = await fetch(`${host}/api/auth`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

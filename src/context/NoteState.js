@@ -3,7 +3,7 @@ import notecontext from "./noteContex";
 import React, { useState } from "react";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000";
+  const host = process.env.PORT;
   const intial = [];
 
   const [notes, setnotes] = useState(intial);
@@ -36,7 +36,7 @@ const NoteState = (props) => {
     });
     const json = await respose.json();
     setnotes(json);
-    console.log(json);
+    // console.log(json);
   };
   const deletenote = async (id) => {
     const respose = await fetch(`${host}/api/notes/deletenotes/${id}`, {
@@ -49,7 +49,7 @@ const NoteState = (props) => {
     });
 
     const result = await respose.json();
-    console.log(result);
+    // console.log(result);
     // setnotes(result)
 
     const newNote =notes.filter((note)=>{return id!==note._id})
@@ -71,7 +71,7 @@ const NoteState = (props) => {
       body: JSON.stringify({ title, description, tag }),
     });
     const json  = await respose.json();
-   console.log(json)
+  //  console.log(json)
     let newNote =JSON.parse(JSON.stringify(notes))
     for (let index = 0; index < newNote.length; index++) {
       const element = newNote[index];

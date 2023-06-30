@@ -62,7 +62,7 @@ const Home = (props) => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -145,7 +145,8 @@ const Home = (props) => {
           {notes.map((note) => {
             return (
               <>
-                <div className="col-3 my-2 mx-3">
+                {/* <div className="sm:col-3  sm:col-12 overflow-hidden sm:my-2 sm:mx-3"> */}
+                <div className="col-lg-3 col-md-5 col-sm-12  " >
                   <NotesItem
                     showAlert={props.showAlert}
                     key={note._id}
