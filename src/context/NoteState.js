@@ -3,7 +3,7 @@ import notecontext from "./noteContex";
 import React, { useState } from "react";
 
 const NoteState = (props) => {
-  const host = process.env.PORT;
+  const host = process.env.REACT_APP_BACKEND_URL;
   const intial = [];
 
   const [notes, setnotes] = useState(intial);

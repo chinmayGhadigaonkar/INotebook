@@ -6,7 +6,7 @@ const Loginpage = (props) => {
   const navigator = useNavigate();
   const submit = async (e) => {
     e.preventDefault();
-    const host = process.env.PORT
+    const host = process.env.REACT_APP_BACKEND_URL
     const respose = await fetch(`${host}/api/auth/login`, {
       method: "post",
       headers: {
